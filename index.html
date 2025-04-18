@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Гадание на карте Таро — $1.99</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #6a0dad; }
+        .btn-wm-container { margin: 25px 0; min-height: 50px; display: flex; justify-content: center; }
+        #wm-widget { width: 200px !important; height: 50px !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🃏 Гадание на карте Таро</h1>
+        <p>Точный ответ на ваш вопрос — <strong>$1.99</strong></p>
+        <div class="btn-wm-container">
+            <div id='wm-widget'></div>
+        </div>
+    </div>
+    <script src='https://merchant.web.money/conf/lib/widgets/wmApp.js?v=1.6'></script>
+    <script>
+        window.webmoney.widgets().button.create({
+            "data": {
+                "amount": "1.99",
+                "purse": "Z123456789000",
+                "desc": "Гадание на карте Таро в @PerfectHoroscope_Bot",
+                "paymentType": "card",
+                "forcePay": true
+            },
+            "style": { "theme": "wm", "design": "skeuomorph" },
+            "lang": "ru"
+        }).mount('wm-widget');
+    </script>
+</body>
+</html>
