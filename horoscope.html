@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Персональный гороскоп — $3.99</title>
+    <!-- Стили такие же как в tarot.html -->
+</head>
+<body>
+    <div class="container">
+        <h1>🔮 Персональный гороскоп</h1>
+        <p>Подробный прогноз на месяц — <strong>$3.99</strong></p>
+        <div class="btn-wm-container">
+            <div id='wm-widget'></div>
+        </div>
+    </div>
+    <script src='https://merchant.web.money/conf/lib/widgets/wmApp.js?v=1.6'></script>
+    <script>
+        window.webmoney.widgets().button.create({
+            "data": {
+                "amount": "3.99",
+                "purse": "Z082126104238",
+                "desc": "Персональный гороскоп в @PerfectHoroscope_Bot",
+                "paymentType": "card",
+                "forcePay": true
+            },
+            "style": { "theme": "wm", "design": "skeuomorph" },
+            "lang": "ru"
+        }).mount('wm-widget');
+    </script>
+</body>
+</html>
